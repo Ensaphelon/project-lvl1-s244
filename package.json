@@ -1,0 +1,39 @@
+{
+  "name": "ensaphelon-brain-games",
+  "version": "0.1.0",
+  "description": "Hexlet brain games project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel-node": "babel-node",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublish": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ensaphelon/project-lvl1-s244.git"
+  },
+  "keywords": [
+    "brain",
+    "games",
+    "hexlet"
+  ],
+  "devDependencies": {
+    "babel-cli": "latest",
+    "babel-core": "latest",
+    "babel-preset-env": "latest",
+    "babel-preset-stage-0": "latest"
+  },
+  "author": "Ramil Musaev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ensaphelon/project-lvl1-s244/issues"
+  },
+  "homepage": "https://github.com/Ensaphelon/project-lvl1-s244#readme",
+  "bin": {
+    "brain-games": "dist/bin/brain-games.js"
+  }
+}
