@@ -1,6 +1,6 @@
 {
   "name": "ensaphelon-brain-games",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Hexlet brain games project",
   "main": "index.js",
   "scripts": {
@@ -35,5 +35,8 @@
   "homepage": "https://github.com/Ensaphelon/project-lvl1-s244#readme",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.9"
   }
 }
