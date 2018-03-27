@@ -1,8 +1,8 @@
 {
   "name": "ensaphelon-brain-games",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Hexlet brain games project",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel-node": "babel-node",
@@ -35,7 +35,8 @@
   },
   "homepage": "https://github.com/Ensaphelon/project-lvl1-s244#readme",
   "bin": {
-    "brain-games": "dist/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-even.js"
   },
   "dependencies": {
     "babel-eslint": "^8.2.2",
