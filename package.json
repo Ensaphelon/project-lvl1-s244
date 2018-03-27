@@ -1,6 +1,6 @@
 {
   "name": "ensaphelon-brain-games",
-  "version": "0.2.0",
+  "version": "0.3.1",
   "description": "Hexlet brain games project",
   "main": "index.js",
   "scripts": {
