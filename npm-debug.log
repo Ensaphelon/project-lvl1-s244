@@ -1,0 +1,130 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@3.9.5
+3 info using node@v6.2.2
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Volumes/Projects/hexlet/brain-games',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/ramil/.npm/ensaphelon-brain-games/0.5.0/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/ramil/.npm correctMkdir not in flight; initializing
+10 info lifecycle ensaphelon-brain-games@0.5.0~prepublish: ensaphelon-brain-games@0.5.0
+11 verbose lifecycle ensaphelon-brain-games@0.5.0~prepublish: unsafe-perm in lifecycle true
+12 verbose lifecycle ensaphelon-brain-games@0.5.0~prepublish: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Volumes/Projects/hexlet/brain-games/node_modules/.bin:/usr/local/bin:/opt/local/bin:/opt/local/sbin:/usr/local/autoconf/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+13 verbose lifecycle ensaphelon-brain-games@0.5.0~prepublish: CWD: /Volumes/Projects/hexlet/brain-games
+14 silly lifecycle ensaphelon-brain-games@0.5.0~prepublish: Args: [ '-c', 'npm run build' ]
+15 silly lifecycle ensaphelon-brain-games@0.5.0~prepublish: Returned: code: 0  signal: null
+16 verbose tar pack [ '/Users/ramil/.npm/ensaphelon-brain-games/0.5.0/package.tgz',
+16 verbose tar pack   '/Volumes/Projects/hexlet/brain-games' ]
+17 verbose tarball /Users/ramil/.npm/ensaphelon-brain-games/0.5.0/package.tgz
+18 verbose folder /Volumes/Projects/hexlet/brain-games
+19 verbose addLocalTarball adding from inside cache /Users/ramil/.npm/ensaphelon-brain-games/0.5.0/package.tgz
+20 verbose correctMkdir /Users/ramil/.npm correctMkdir not in flight; initializing
+21 silly cache afterAdd ensaphelon-brain-games@0.5.0
+22 verbose afterAdd /Users/ramil/.npm/ensaphelon-brain-games/0.5.0/package/package.json not in flight; writing
+23 verbose correctMkdir /Users/ramil/.npm correctMkdir not in flight; initializing
+24 verbose afterAdd /Users/ramil/.npm/ensaphelon-brain-games/0.5.0/package/package.json written
+25 silly publish { name: 'ensaphelon-brain-games',
+25 silly publish   version: '0.5.0',
+25 silly publish   description: 'Hexlet brain games project',
+25 silly publish   main: 'src/index.js',
+25 silly publish   scripts:
+25 silly publish    { test: 'echo "Error: no test specified" && exit 1',
+25 silly publish      'babel-node': 'babel-node',
+25 silly publish      build: 'NODE_ENV=production babel src --out-dir dist --source-maps inline',
+25 silly publish      prepublish: 'npm run build',
+25 silly publish      eslint: 'eslint src/**' },
+25 silly publish   files: [ 'dist' ],
+25 silly publish   repository:
+25 silly publish    { type: 'git',
+25 silly publish      url: 'git+https://github.com/Ensaphelon/project-lvl1-s244.git' },
+25 silly publish   keywords: [ 'brain', 'games', 'hexlet' ],
+25 silly publish   devDependencies:
+25 silly publish    { 'babel-cli': 'latest',
+25 silly publish      'babel-core': 'latest',
+25 silly publish      'babel-preset-env': 'latest',
+25 silly publish      'babel-preset-stage-0': 'latest' },
+25 silly publish   author: { name: 'Ramil Musaev' },
+25 silly publish   license: 'ISC',
+25 silly publish   bugs: { url: 'https://github.com/Ensaphelon/project-lvl1-s244/issues' },
+25 silly publish   homepage: 'https://github.com/Ensaphelon/project-lvl1-s244#readme',
+25 silly publish   bin:
+25 silly publish    { 'brain-games': 'dist/bin/brain-games.js',
+25 silly publish      'brain-even': 'dist/bin/brain-even.js',
+25 silly publish      'brain-calc': 'dist/bin/brain-calc.js' },
+25 silly publish   dependencies:
+25 silly publish    { 'babel-eslint': '^8.2.2',
+25 silly publish      eslint: '^4.19.1',
+25 silly publish      'eslint-config-airbnb-base': '^12.1.0',
+25 silly publish      'eslint-plugin-import': '^2.9.0',
+25 silly publish      'readline-sync': '^1.4.9' },
+25 silly publish   readme: '[![Maintainability](https://api.codeclimate.com/v1/badges/2295e242ab5097822c82/maintainability)](https://codeclimate.com/github/Ensaphelon/project-lvl1-s244/maintainability)\n[![Test Coverage](https://api.codeclimate.com/v1/badges/2295e242ab5097822c82/test_coverage)](https://codeclimate.com/github/Ensaphelon/project-lvl1-s244/test_coverage)\n[![Build Status](https://travis-ci.org/Ensaphelon/project-lvl1-s244.svg?branch=master)](https://travis-ci.org/Ensaphelon/project-lvl1-s244)\n',
+25 silly publish   readmeFilename: 'README.md',
+25 silly publish   gitHead: '2dbf1e5191252413c00370ee0782fa013772c2fc',
+25 silly publish   _id: 'ensaphelon-brain-games@0.5.0',
+25 silly publish   _shasum: 'd76bdb09670db171b8b0cb04afb528eb854ba0fe',
+25 silly publish   _from: '.' }
+26 verbose getPublishConfig undefined
+27 silly mapToRegistry name ensaphelon-brain-games
+28 silly mapToRegistry using default registry
+29 silly mapToRegistry registry https://registry.npmjs.org/
+30 silly mapToRegistry data Result {
+30 silly mapToRegistry   raw: 'ensaphelon-brain-games',
+30 silly mapToRegistry   scope: null,
+30 silly mapToRegistry   name: 'ensaphelon-brain-games',
+30 silly mapToRegistry   rawSpec: '',
+30 silly mapToRegistry   spec: 'latest',
+30 silly mapToRegistry   type: 'tag' }
+31 silly mapToRegistry uri https://registry.npmjs.org/ensaphelon-brain-games
+32 verbose publish registryBase https://registry.npmjs.org/
+33 silly publish uploading /Users/ramil/.npm/ensaphelon-brain-games/0.5.0/package.tgz
+34 verbose request uri https://registry.npmjs.org/ensaphelon-brain-games
+35 verbose request sending authorization for write operation
+36 info attempt registry request try #1 at 22:00:22
+37 verbose request using bearer token for auth
+38 verbose request id 9b4024599905f399
+39 http request PUT https://registry.npmjs.org/ensaphelon-brain-games
+40 http 403 https://registry.npmjs.org/ensaphelon-brain-games
+41 verbose headers { 'content-type': 'application/json',
+41 verbose headers   'cache-control': 'max-age=300',
+41 verbose headers   'content-length': '93',
+41 verbose headers   'accept-ranges': 'bytes',
+41 verbose headers   date: 'Wed, 28 Mar 2018 18:00:23 GMT',
+41 verbose headers   via: '1.1 varnish',
+41 verbose headers   connection: 'keep-alive',
+41 verbose headers   'x-served-by': 'cache-bma7027-BMA',
+41 verbose headers   'x-cache': 'MISS',
+41 verbose headers   'x-cache-hits': '0',
+41 verbose headers   'x-timer': 'S1522260022.419472,VS0,VE1028',
+41 verbose headers   vary: 'Accept-Encoding, Accept' }
+42 verbose request invalidating /Users/ramil/.npm/registry.npmjs.org/ensaphelon-brain-games on PUT
+43 error publish Failed PUT 403
+44 verbose stack Error: You cannot publish over the previously published versions: 0.5.0. : ensaphelon-brain-games
+44 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+44 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+44 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+44 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:200:22)
+44 verbose stack     at emitTwo (events.js:106:13)
+44 verbose stack     at Request.emit (events.js:191:7)
+44 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1067:10)
+44 verbose stack     at emitOne (events.js:101:20)
+44 verbose stack     at Request.emit (events.js:188:7)
+44 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:988:12)
+45 verbose statusCode 403
+46 verbose pkgid ensaphelon-brain-games
+47 verbose cwd /Volumes/Projects/hexlet/brain-games
+48 error Darwin 16.4.0
+49 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+50 error node v6.2.2
+51 error npm  v3.9.5
+52 error code E403
+53 error You cannot publish over the previously published versions: 0.5.0. : ensaphelon-brain-games
+54 error If you need help, you may report this error at:
+54 error     <https://github.com/npm/npm/issues>
+55 verbose exit [ 1, true ]
