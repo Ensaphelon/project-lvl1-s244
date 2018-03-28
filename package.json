@@ -36,7 +36,8 @@
   "homepage": "https://github.com/Ensaphelon/project-lvl1-s244#readme",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/brain-even.js"
+    "brain-even": "dist/bin/brain-even.js",
+    "brain-calc": "dist/bin/brain-calc.js"
   },
   "dependencies": {
     "babel-eslint": "^8.2.2",
