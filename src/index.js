@@ -25,45 +25,7 @@ export const calcRandomOperation = [
   },
 ];
 
-// Games logic
-
-export const brainEven = (gameSettings) => {
-  let correct = false;
-  const number = getRandomNumber(gameSettings.min, gameSettings.max);
-  print(`Question: ${number}`);
-  const isEven = number % 2 === 0;
-  const correctAnswer = isEven ? 'yes' : 'no';
-  const currentAnswer = ask('Your answer: ');
-  if ((currentAnswer === 'yes' && isEven) || (currentAnswer === 'no' && !isEven)) {
-    correct = true;
-  }
-  return {
-    correct,
-    currentAnswer,
-    correctAnswer,
-  };
-};
-
-export const brainCalculator = (gameSettings) => {
-  let correct = false;
-  const operatorNumber = getRandomNumber(0, 2);
-  const firstOperand = getRandomNumber(gameSettings.min, gameSettings.max);
-  const secondOperand = getRandomNumber(gameSettings.min, gameSettings.max);
-  const operator = calcRandomOperation[operatorNumber].sign;
-  const correctAnswer = calcRandomOperation[operatorNumber].method(firstOperand, secondOperand);
-  print(`Question: ${firstOperand} ${operator} ${secondOperand}`);
-  const currentAnswer = ask('Your answer: ');
-  if (currentAnswer === correctAnswer.toString()) {
-    correct = true;
-  }
-  return {
-    correct,
-    currentAnswer,
-    correctAnswer,
-  };
-};
-
-// Game runner logic
+// Game runner
 
 export const gameOver = (userName, success, result) => {
   if (success) {
