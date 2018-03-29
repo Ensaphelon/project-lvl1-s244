@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import { print, ask, getGreetings } from '..';
+import brainGames from '../games/brain-games';
 
-print('Welcome to Brain Games!');
-print(getGreetings(ask('May I have your name? ')));
+brainGames();
