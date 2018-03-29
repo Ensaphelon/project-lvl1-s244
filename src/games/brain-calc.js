@@ -1,22 +1,18 @@
-import { ask, calcRandomOperation, getRandomNumber, print } from '../index';
+import { calcRandomOperation, getRandomNumber, startGame } from '../';
+import settings from '../settings';
 
-const brainCalculator = (gameSettings) => {
-  let correct = false;
-  const operatorNumber = getRandomNumber(0, 2);
+const logic = (gameSettings) => {
   const firstOperand = getRandomNumber(gameSettings.min, gameSettings.max);
   const secondOperand = getRandomNumber(gameSettings.min, gameSettings.max);
-  const operator = calcRandomOperation[operatorNumber].sign;
-  const correctAnswer = calcRandomOperation[operatorNumber].method(firstOperand, secondOperand);
-  print(`Question: ${firstOperand} ${operator} ${secondOperand}`);
-  const currentAnswer = ask('Your answer: ');
-  if (currentAnswer === correctAnswer.toString()) {
-    correct = true;
-  }
+  const operation = calcRandomOperation[getRandomNumber(0, 2)];
+  const correctAnswer = operation.calculate(firstOperand, secondOperand).toString();
+  const question = `${firstOperand} ${operation.sign} ${secondOperand}`;
   return {
-    correct,
-    currentAnswer,
+    question,
     correctAnswer,
   };
 };
 
-export default brainCalculator;
+export default () => {
+  startGame(logic, settings.brainCalculator);
+};

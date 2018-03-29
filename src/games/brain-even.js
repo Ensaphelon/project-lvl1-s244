@@ -1,20 +1,15 @@
-import { ask, getRandomNumber, print } from '../index';
+import { getRandomNumber, startGame } from '../';
+import settings from '../settings';
 
-const brainEven = (gameSettings) => {
-  let correct = false;
-  const number = getRandomNumber(gameSettings.min, gameSettings.max);
-  print(`Question: ${number}`);
-  const isEven = number % 2 === 0;
-  const correctAnswer = isEven ? 'yes' : 'no';
-  const currentAnswer = ask('Your answer: ');
-  if ((currentAnswer === 'yes' && isEven) || (currentAnswer === 'no' && !isEven)) {
-    correct = true;
-  }
+const logic = (gameSettings) => {
+  const question = getRandomNumber(gameSettings.min, gameSettings.max);
+  const correctAnswer = question % 2 === 0 ? 'yes' : 'no';
   return {
-    correct,
-    currentAnswer,
+    question,
     correctAnswer,
   };
 };
 
-export default brainEven;
+export default () => {
+  startGame(logic, settings.brainEven);
+};
