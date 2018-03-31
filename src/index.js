@@ -87,6 +87,25 @@ export const getBalanced = (number) => {
   return sort(number);
 };
 
+export const makeProgression = (diff, limit, startFrom, result = [], step = 1) => {
+  if (step > limit) {
+    return result;
+  }
+  const currentNumber = startFrom + (diff * step);
+  result.push(currentNumber);
+  return makeProgression(diff, limit, startFrom, result, step + 1);
+};
+
+export const hideFormProgression = (progression, number) => {
+  const hiddenNumber = progression[number];
+  const hiddenProgression = progression;
+  hiddenProgression[number] = '..';
+  return {
+    progression: hiddenProgression.join(' '),
+    hiddenNumber,
+  };
+};
+
 // Game runner
 
 export const gameOver = (userName, success, result, currentAnswer) => {
