@@ -91,8 +91,7 @@ export const makeProgression = (diff, limit, startFrom, result = [], step = 1) =
   if (step > limit) {
     return result;
   }
-  const currentNumber = startFrom + (diff * step);
-  result.push(currentNumber);
+  result.push(startFrom + (diff * step));
   return makeProgression(diff, limit, startFrom, result, step + 1);
 };
 
@@ -104,6 +103,16 @@ export const hideFormProgression = (progression, number) => {
     progression: hiddenProgression.join(' '),
     hiddenNumber,
   };
+};
+
+export const isPrimeNumber = (number, result = 0, step = 1) => {
+  if (result > 2) {
+    return false;
+  }
+  if (result < 2 && step >= number) {
+    return true;
+  }
+  return isPrimeNumber(number, number % step === 0 ? result + 1 : result, step + 1);
 };
 
 // Game runner
