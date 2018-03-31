@@ -1,9 +1,8 @@
 import { calcRandomOperation, getRandomNumber, startGame } from '../';
-import settings from '../settings';
 
-const logic = (gameSettings) => {
-  const firstOperand = getRandomNumber(gameSettings.min, gameSettings.max);
-  const secondOperand = getRandomNumber(gameSettings.min, gameSettings.max);
+const logic = () => {
+  const firstOperand = getRandomNumber(1, 20);
+  const secondOperand = getRandomNumber(1, 20);
   const operation = calcRandomOperation[getRandomNumber(0, 2)];
   const correctAnswer = operation.calculate(firstOperand, secondOperand).toString();
   const question = `${firstOperand} ${operation.sign} ${secondOperand}`;
@@ -14,5 +13,5 @@ const logic = (gameSettings) => {
 };
 
 export default () => {
-  startGame(logic, settings.brainCalculator);
+  startGame(logic, 3, 'What is the result of the expression?');
 };

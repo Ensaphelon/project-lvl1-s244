@@ -1,8 +1,7 @@
 import { getRandomNumber, startGame } from '../';
-import settings from '../settings';
 
-const logic = (gameSettings) => {
-  const question = getRandomNumber(gameSettings.min, gameSettings.max);
+const logic = () => {
+  const question = getRandomNumber(1, 50);
   const correctAnswer = question % 2 === 0 ? 'yes' : 'no';
   return {
     question,
@@ -11,5 +10,5 @@ const logic = (gameSettings) => {
 };
 
 export default () => {
-  startGame(logic, settings.brainEven);
+  startGame(logic, 3, 'Answer "yes" if number even otherwise answer "no".');
 };

@@ -1,9 +1,8 @@
 import { getRandomNumber, getGcd, startGame } from '../';
-import settings from '../settings';
 
-const logic = (gameSettings) => {
-  const a = getRandomNumber(gameSettings.min, gameSettings.max);
-  const b = getRandomNumber(gameSettings.min, gameSettings.max);
+const logic = () => {
+  const a = getRandomNumber(1, 50);
+  const b = getRandomNumber(1, 50);
   const question = `${a} ${b}`;
   const correctAnswer = getGcd(a, b).toString();
   return {
@@ -13,5 +12,5 @@ const logic = (gameSettings) => {
 };
 
 export default () => {
-  startGame(logic, settings.brainGcd);
+  startGame(logic, 3, 'Find the greatest common divisor of given numbers.');
 };
