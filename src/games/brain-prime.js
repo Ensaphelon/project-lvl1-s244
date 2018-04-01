@@ -9,5 +9,5 @@ const logic = () => {
 };
 
 export default () => {
-  startGame(logic, 3, 'Is this number prime?');
+  startGame(logic, 'Is this number prime?');
 };

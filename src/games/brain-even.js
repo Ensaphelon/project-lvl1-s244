@@ -10,5 +10,5 @@ const logic = () => {
 };
 
 export default () => {
-  startGame(logic, 3, 'Answer "yes" if number even otherwise answer "no".');
+  startGame(logic, 'Answer "yes" if number even otherwise answer "no".');
 };

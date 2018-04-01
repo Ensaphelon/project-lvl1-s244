@@ -12,5 +12,5 @@ const logic = () => {
 };
 
 export default () => {
-  startGame(logic, 3, 'Find the greatest common divisor of given numbers.');
+  startGame(logic, 'Find the greatest common divisor of given numbers.');
 };

@@ -13,5 +13,5 @@ const logic = () => {
 };
 
 export default () => {
-  startGame(logic, 3, 'What is the result of the expression?');
+  startGame(logic, 'What is the result of the expression?');
 };

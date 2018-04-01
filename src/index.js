@@ -65,16 +65,16 @@ export const sort = (str) => {
   return numbers.sort((a, b) => a - b).join('');
 };
 
-export const balanceNumber = (number, extremum, diff) => {
-  const newMin = extremum.min.value + Math.floor(diff / 2);
-  const newMax = extremum.max.value - Math.floor(diff / 2);
-  let str = number.toString();
-  str = swapCharacters(str, extremum.min.index, newMax);
-  str = swapCharacters(str, extremum.max.index, newMin);
-  return Number(str);
-};
 
-export const getBalanced = (number) => {
+export const getBalancedNumber = (number) => {
+  const balanceNumber = (extremum, diff) => {
+    const newMin = extremum.min.value + Math.floor(diff / 2);
+    const newMax = extremum.max.value - Math.floor(diff / 2);
+    let str = number.toString();
+    str = swapCharacters(str, extremum.min.index, newMax);
+    str = swapCharacters(str, extremum.max.index, newMin);
+    return Number(str);
+  };
   const str = number.toString();
   if (str.length < 2) {
     return true;
@@ -82,7 +82,7 @@ export const getBalanced = (number) => {
   const extremum = getExtremum(str, 0, Number(str[0]), 0, 0, 0);
   const diff = extremum.max.value - extremum.min.value;
   if (diff > 1) {
-    return getBalanced(balanceNumber(str, extremum, diff));
+    return getBalancedNumber(balanceNumber(extremum, diff));
   }
   return sort(number);
 };
@@ -95,12 +95,12 @@ export const makeProgression = (diff, limit, startFrom, result = [], step = 1) =
   return makeProgression(diff, limit, startFrom, result, step + 1);
 };
 
-export const hideFormProgression = (progression, number) => {
-  const hiddenNumber = progression[number];
-  const hiddenProgression = progression;
-  hiddenProgression[number] = '..';
+export const hideFromProgression = (progression, index) => {
+  const resultProgression = progression;
+  const hiddenNumber = resultProgression[index];
+  resultProgression[index] = '..';
   return {
-    progression: hiddenProgression.join(' '),
+    progression: progression.join(' '),
     hiddenNumber,
   };
 };
@@ -126,12 +126,12 @@ export const gameOver = (userName, success, result, currentAnswer) => {
   }
 };
 
-export const startGame = (logic, rounds, message) => {
+export const startGame = (logic, message) => {
   print('Welcome to Brain Games!');
   print(message);
   const userName = ask('May I have your name? ');
   let steps = 0;
-  while (steps < rounds) {
+  while (steps < 3) {
     const round = logic();
     print(`Question: ${round.question}`);
     const currentAnswer = ask('Your answer: ');
